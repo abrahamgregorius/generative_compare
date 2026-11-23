@@ -80,8 +80,8 @@ def fid_features(images, device, batch_size=100):
 def frechet_distance(feats_a, feats_b, eps=1e-6):
     """FID between two sets of Inception features (Heusel et al., 2017)."""
     mu1, mu2 = feats_a.mean(0).numpy(), feats_b.mean(0).numpy()
-    s1 = torch.cov(feats_a.T).numpy()
-    s2 = torch.cov(feats_b.T).numpy()
+    s1 = torch.cov(feats_a.T).numpy() + eps * torch.eye(feats_a.shape[1]).numpy()
+    s2 = torch.cov(feats_b.T).numpy() + eps * torch.eye(feats_b.shape[1]).numpy()
     diff = mu1 - mu2
     covmean, _ = linalg.sqrtm(s1.dot(s2), disp=False)
     if not np.isfinite(covmean).all():
@@ -89,4 +89,6 @@ def frechet_distance(feats_a, feats_b, eps=1e-6):
         covmean = linalg.sqrtm((s1 + offset).dot(s2 + offset))
     if np.iscomplexobj(covmean):
         covmean = covmean.real
-    return float(diff.dot(diff) + np.trace(s1) + np.trace(s2) - 2 * np.trace(covmean))
+    fid = float(diff.dot(diff) + np.trace(s1) + np.trace(s2) - 2 * np.trace(covmean))
+    # numerical noise in sqrtm can push identical/near-identical sets slightly negative
+    return max(0.0, fid)
