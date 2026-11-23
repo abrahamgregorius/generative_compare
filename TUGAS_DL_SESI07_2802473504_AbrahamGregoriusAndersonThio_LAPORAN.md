@@ -6,8 +6,8 @@
 |---|---|
 | **Nama Lengkap** | Abraham Gregorius Anderson Thio |
 | **NIM** | 2802473504 |
-| **Kelas** | `[ISI KELAS — mis. L5BC]` |
-| **Tautan Repositori** | `[ISI URL REPO GITHUB — mis. https://github.com/<username>/TUGAS_DL_SESI07_2802473504_AbrahamGregoriusAndersonThio]` |
+| **Kelas** | `LA01` |
+| **Tautan Repositori** | `https://github.com/abrahamgregorius/generative_compare` |
 | **Dosen Pengampu** | Muhammad Fikri Hasani, S.Kom., M.T. & Tim Dosen Pengampu D6421 |
 
 Repositori memuat: skrip modular PyTorch (`src/` — data, models, metrics, dua pipeline pelatihan, satu suite evaluasi), `requirements.txt`, README petunjuk eksekusi, dua notebook eksekusi dengan output tertanam, artefak eksperimen (weights, grids, metrics), serta riwayat commit bertahap. Seluruh eksperimen memakai dataset **MNIST** (28×28 grayscale, 10 kelas, 70.000 citra, unduhan legal via `torchvision.datasets`) dengan split terstandarisasi **seed 42**: 54.000 train (80%) / 6.000 val (10%) / 10.000 test (10%); piksel [0,1]; batch 128; semua metrik numerik dievaluasi pada Test Set.
