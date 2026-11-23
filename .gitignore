@@ -1,0 +1,11 @@
+# dataset cache (re-downloadable via torchvision)
+artifacts_mlp_gen_proof/data/
+# Python
+__pycache__/
+*.pyc
+# working/experiment scratch
+_work/
+# large intermediate tensors (reproducible from src/ code + seed 42)
+artifacts_mlp_gen_proof/grids/*.pt
+artifacts_mlp_gen_proof/latents/*.pt
+artifacts_generative_compare/*.pt
