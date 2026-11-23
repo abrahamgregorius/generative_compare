@@ -1,0 +1,49 @@
+{
+  "vanilla_ae": {
+    "path": "recon (single-pass)",
+    "ms_per_batch64_mean": 0.6714533332797146,
+    "ms_per_batch64_std": 0.49667373850478047,
+    "ms_per_batch64_min": 0.4212999997434963
+  },
+  "sparse_ae": {
+    "path": "recon (single-pass)",
+    "ms_per_batch64_mean": 0.5535466666818442,
+    "ms_per_batch64_std": 0.1439618461762541,
+    "ms_per_batch64_min": 0.42810000013560057
+  },
+  "vae": {
+    "path": "recon (single-pass)",
+    "ms_per_batch64_mean": 0.8406966666219281,
+    "ms_per_batch64_std": 0.46840363327970946,
+    "ms_per_batch64_min": 0.4247999995641294
+  },
+  "gan": {
+    "path": "generation (single-pass)",
+    "ms_per_batch64_mean": 0.4270700000082191,
+    "ms_per_batch64_std": 0.15293800735847632,
+    "ms_per_batch64_min": 0.2558000001045002
+  },
+  "dcgan": {
+    "path": "generation (single-pass)",
+    "ms_per_batch64_mean": 7.093986666692824,
+    "ms_per_batch64_std": 0.8353919646687225,
+    "ms_per_batch64_min": 5.471399999805726
+  },
+  "vae_prior_sampling": {
+    "path": "generation from prior z~N(0,I) (single-pass decode)",
+    "ms_per_batch64_mean": 0.6608833332696425,
+    "ms_per_batch64_std": 1.3753077377194123,
+    "ms_per_batch64_min": 0.26900000011664815
+  },
+  "ddpm": {
+    "path": "generation (400-step iterative denoising)",
+    "runs_ms": [
+      30781.488199999785,
+      31364.290299999993,
+      30840.279999999893
+    ],
+    "ms_per_batch64_mean": 30995.352833333225,
+    "ms_per_batch64_std": 320.8586287910664,
+    "n_runs": 3
+  }
+}

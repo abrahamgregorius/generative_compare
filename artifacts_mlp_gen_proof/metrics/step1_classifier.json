@@ -1,0 +1,16 @@
+{
+  "final_test_acc": 0.945,
+  "final_val_acc": 0.9408333333333333,
+  "epochs_trained": 1,
+  "acc_target": 0.88,
+  "target_met": true,
+  "z_dim": 64,
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.3875822038429755,
+      "val_acc": 0.9408333333333333,
+      "test_acc": 0.945
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+{
+  "step1_train_mlp_classifier": 9.11999499999979,
+  "step4_train_frozen_latent_decoder": 81.37874609999994,
+  "step5_random_latent_sampling": 0.0012671000001773791
+}

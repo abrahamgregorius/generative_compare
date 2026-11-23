@@ -1,0 +1,9 @@
+{
+  "step1_final_test_acc": 0.945,
+  "step4_test_mse": 0.06793135404586792,
+  "step4_test_psnr_db": 11.843708992004395,
+  "step4_test_ssim": 0.11954247951507568,
+  "step3_transpose_projection_mse": 0.3257300555706024,
+  "n_generated_samples": 25,
+  "artifacts_dir": "artifacts_mlp_gen_proof"
+}

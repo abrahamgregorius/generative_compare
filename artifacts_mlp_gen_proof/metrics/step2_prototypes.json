@@ -1,0 +1,9 @@
+{
+  "note": "zero-extra-training transposed-weight class prototypes",
+  "shape": [
+    10,
+    1,
+    28,
+    28
+  ]
+}

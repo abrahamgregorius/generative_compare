@@ -1,0 +1,52 @@
+{
+  "seed": 42,
+  "device": "cpu",
+  "z_dim": 64,
+  "models": {
+    "vanilla_ae": {
+      "train_seconds": 113.0,
+      "test_mse": 0.005329173058271408,
+      "test_psnr_db": 23.540729522705078,
+      "test_ssim": 0.9354855418205261,
+      "epochs": 15
+    },
+    "sparse_ae": {
+      "train_seconds": 115.3,
+      "test_mse": 0.005366737022995949,
+      "test_psnr_db": 23.525861740112305,
+      "test_ssim": 0.9309181571006775,
+      "latent_active_frac_test": 0.625,
+      "epochs": 15,
+      "lambda_l1": 0.001
+    },
+    "vae": {
+      "train_seconds": 129.6,
+      "test_mse": 0.023582668974995613,
+      "test_psnr_db": 16.682147979736328,
+      "test_ssim": 0.6812523603439331,
+      "epochs": 15
+    },
+    "gan": {
+      "train_seconds": 283.7,
+      "mean_pairwise_l2": 8.401264190673828,
+      "mean_nn_l2_to_test": 5.004039287567139,
+      "max_nn_l2_to_test": 7.515913486480713,
+      "epochs": 30
+    },
+    "dcgan": {
+      "train_seconds": 443.0,
+      "mean_pairwise_l2": 9.672585487365723,
+      "mean_nn_l2_to_test": 6.198249816894531,
+      "max_nn_l2_to_test": 8.493608474731445,
+      "epochs": 10
+    },
+    "ddpm": {
+      "train_seconds": 23171.7,
+      "mean_pairwise_l2": 7.329798698425293,
+      "mean_nn_l2_to_test": 5.781754970550537,
+      "max_nn_l2_to_test": 7.757687091827393,
+      "epochs": 8,
+      "timesteps": 400
+    }
+  }
+}

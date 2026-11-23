@@ -1,0 +1,83 @@
+{
+  "history": [
+    {
+      "epoch": 1,
+      "train_mse": 0.04347269338645317,
+      "latent_active_frac": 0.5114157643363374
+    },
+    {
+      "epoch": 2,
+      "train_mse": 0.016942616791084962,
+      "latent_active_frac": 0.5545703885962048
+    },
+    {
+      "epoch": 3,
+      "train_mse": 0.012217953978865236,
+      "latent_active_frac": 0.5846951019142477
+    },
+    {
+      "epoch": 4,
+      "train_mse": 0.010010491558247143,
+      "latent_active_frac": 0.5961752073459715
+    },
+    {
+      "epoch": 5,
+      "train_mse": 0.008790357220779966,
+      "latent_active_frac": 0.6029164721897993
+    },
+    {
+      "epoch": 6,
+      "train_mse": 0.007860588392173802,
+      "latent_active_frac": 0.6114826757478488
+    },
+    {
+      "epoch": 7,
+      "train_mse": 0.007225015733666994,
+      "latent_active_frac": 0.6151930513257664
+    },
+    {
+      "epoch": 8,
+      "train_mse": 0.006779474253869719,
+      "latent_active_frac": 0.6170042292766661
+    },
+    {
+      "epoch": 9,
+      "train_mse": 0.006473114524036646,
+      "latent_active_frac": 0.6181871211641773
+    },
+    {
+      "epoch": 10,
+      "train_mse": 0.006206817291125103,
+      "latent_active_frac": 0.6192007923578199
+    },
+    {
+      "epoch": 11,
+      "train_mse": 0.006013368453002639,
+      "latent_active_frac": 0.6200147872852488
+    },
+    {
+      "epoch": 12,
+      "train_mse": 0.005841099172002739,
+      "latent_active_frac": 0.6208031201532102
+    },
+    {
+      "epoch": 13,
+      "train_mse": 0.005687014897526414,
+      "latent_active_frac": 0.6215301699830458
+    },
+    {
+      "epoch": 14,
+      "train_mse": 0.0055575340681329926,
+      "latent_active_frac": 0.6221992011883812
+    },
+    {
+      "epoch": 15,
+      "train_mse": 0.0054346279688179495,
+      "latent_active_frac": 0.6228097181467084
+    }
+  ],
+  "test_mse": 0.005366737022995949,
+  "test_psnr_db": 23.525861740112305,
+  "test_ssim": 0.9309181571006775,
+  "latent_active_frac_test": 0.625
+}
