@@ -1,0 +1,10 @@
+{
+  "n_samples_per_set": 5000,
+  "real_reference": "first 5,000 MNIST test images (seed-42 split)",
+  "protocol": "InceptionV3 pool3 (pytorch-fid), grayscale->3ch, CPU",
+  "fid_real_vs_real_half": 4.767547607421875,
+  "fid_vae": 66.95573425292969,
+  "fid_gan": 102.50201416015625,
+  "fid_dcgan": 24.019775390625,
+  "fid_ddpm": 177.25592041015625
+}

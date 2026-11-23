@@ -300,6 +300,20 @@ Semua model berbagi konfigurasi yang persis sama — identik dengan notebook uta
 
 **Catatan variansi sampling:** statistik GAN/DCGAN/DDPM pada tabel ini berasal dari run pelatihan (`metrics/*.json`). Saat notebook `Generative_Models_Compare.ipynb` dieksekusi ulang (checkpoint dimuat, sampel diregenerasi dengan noise acak baru), statistik ini bergeser sedikit karena variansi sampling — mis. DCGAN pairwise L2 9,67 → 10,02, DDPM 7,33 → 7,70. Selisih ini normal untuk 64 sampel dan tidak mengubah kesimpulan (semua tetap jauh dari mode collapse).
 
+### IV.1.1a FID (Fréchet Inception Distance) — 5.000 sampel per model
+
+Dihitung belakangan dengan protokol standar: fitur InceptionV3 pool3 (2048-d, paket `pytorch-fid`), 5.000 sampel sintetis per model vs 5.000 citra test asli (grayscale direplikasi 3 kanal). Baseline FID antara dua paruh non-overlap citra test asli = **4,8** (floor bias ukuran 5k sampel).
+
+| Model | FID (5k) | Interpretasi |
+|---|---|---|
+| **DCGAN** | **24,0** | Terbaik pada budget ini — sampel paling bersih & kontras (konsisten §IV.3.5) |
+| **VAE** | 67,0 | Blur (𝔼[x\|z]) namun distribusinya tetap dekat MNIST |
+| **GAN (MLP)** | 102,5 | Stroke tipis/sebagian terputus — kapasitas FC terbatas |
+| **DDPM** | 177,3 | Undertrained (8 epoch × T=400, UNet kecil; eps-MSE belum plateau) — limitasi budget, bukan arsitektur |
+| *(ref)* real vs real-half | 4,8 | Floor bias |
+
+`artifacts_generative_compare/metrics/fid_scores.json`; protokol & cache sampel: `_work/fid_cache/` (5.000 sampel per model, seed 42). Analisis lengkap pada laporan Q1.
+
 ### IV.1.2 Pembandingan tiga keluarga
 
 - **Rekonstruksi murni (AE, Sparse AE):** MSE 0,0053 — **12,7× lebih baik dari frozen decoder** dan **12,6× lebih baik dari baseline mean-image**. Ini adalah kuantifikasi langsung dari klaim Tahap 4: ketika encoder *ikut* dioptimasi rekonstruktif, bottleneck 64-dim ternyata menyimpan detail visual yang oleh classifier justru **dibuang**.
